@@ -71,7 +71,8 @@ def get_url_txt(the_url, enablePK=False):
     req.add_header('Pragma', 'no-cache')
     req.add_header('Cache-Control', 'no-cache')
     req.add_header('X-API-Key', 'f1c19163-0c32-4189-8b3a-10fb28512551/web-app-ssr')
-
+    req.add_header('x-pfu-tenant', 'TVAPLUS')
+    
     response = urlopen(req)
 
     data = handleHttpResponse(response)
